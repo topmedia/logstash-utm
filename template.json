@@ -1,0 +1,78 @@
+{
+  "template": "utm",
+  "mappings": {
+    "_default_": {
+      "properties": {
+        "status_code": {
+          "type": "integer"
+        },
+        "size": {
+          "type": "long"
+        },
+        "req_time": {
+          "type": "double"
+        },
+        "source_ip": {
+          "type": "ip"
+        },
+        "dest_ip": {
+          "type": "ip"
+        },
+        "dest_host": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "category_name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "user": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "profile": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "filter_action": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "geoip": {
+          "type": "object",
+          "dynamic": true,
+          "properties": {
+            "location": {
+              "type": "geo_point"
+            }
+          }
+        }
+      }
+    }
+  }
+}
