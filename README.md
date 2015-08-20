@@ -9,6 +9,7 @@ At this point only the packet filter and web filter (`http*.log`) file types are
 ## Usage
 
 * [Install Logstash](https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html)
+* [Install Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html)
 * Unpack your UTM logs into the `input/` sub-directory.
 * Run `make`. Logstash will start up, work through all files that are already present and then wait for more.
 
