@@ -1,8 +1,8 @@
-.PHONY: logstash-packetfilter.conf
+.PHONY: logstash-sophos-utm.conf
 
-logstash-packetfilter.conf: clean
+logstash-sophos-utm.conf:
 	logstash -f $@
 
 clean:
-	curl -XDELETE 192.168.99.100:32771/utm
+	curl -XDELETE localhost:9200/utm
 	rm -f ~/.since*
