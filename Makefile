@@ -1,7 +1,7 @@
 .PHONY: logstash-sophos-utm.conf
 
 logstash-sophos-utm.conf:
-	logstash -f $@
+	logstash --allow-env -f $@
 
 clean:
 	curl -XDELETE localhost:9200/utm
